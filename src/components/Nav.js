@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 
 function Nav (props) {
     return (
@@ -10,11 +11,15 @@ function Nav (props) {
     );
 }
 
+const StyledLi = styled.li`
+  list-style: none;
+`
+
 function NavLink (props) {
     return (
-        <li className="nav__link">
+        <StyledLi>
             <a href={props.link || "#"}>{props.children}</a>
-        </li>
+        </StyledLi>
     );
 } 
 

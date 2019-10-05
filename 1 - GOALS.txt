@@ -9,6 +9,7 @@ The goal of this app is to create a simple "social media" application where:
 What I want to learn while doing this:
     - More practice on React
     - Redux
-    - CSS-in-JS
+    - CSS-in-JS => Styled-Components (✔)
     - PHP
     - Fetch API
+    - React Router
