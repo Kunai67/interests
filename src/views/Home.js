@@ -1,19 +1,14 @@
 import React from 'react';
-import styled from 'styled-components';
-import './css/app.css';
-import { Link } from 'react-router-dom';
-
-const TextCenteredDiv = styled.div`
-    text-align: center;
-`;
+import { TextCenteredDiv, ThemedHeading, ThemedParagraph, BtnLink} from '../components/Styled-Components';
+import '../css/app.css';
 
 function Home () {
     return (
         <TextCenteredDiv>
-          <h1>Interests</h1>
-          {/* <img src="https://picsum.photos/200" alt="Random"/> */}
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-          
+          <ThemedHeading>Interests</ThemedHeading>
+          <ThemedParagraph>The simple social media app.</ThemedParagraph>
+          <BtnLink to="/sign-up">Sign Up</BtnLink>
+          <BtnLink to="/sign-in">Sign In</BtnLink>
         </TextCenteredDiv>
       );
 }

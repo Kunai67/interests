@@ -1,7 +1,7 @@
 The goal of this app is to create a simple "social media" application where:
     - A user can register
     - A user can login
-    - The front-end is React
+    - The front-end is React (✔)
     - The back-end is PHP
     - The database is MySQL
     - The users can put interests in their profile and the backend will group them with other users with the same interests
@@ -12,4 +12,4 @@ What I want to learn while doing this:
     - CSS-in-JS => Styled-Components (✔)
     - PHP
     - Fetch API
-    - React Router
+    - React Router (✔)
