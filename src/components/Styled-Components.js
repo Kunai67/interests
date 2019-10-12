@@ -17,6 +17,16 @@ const BtnLink = styled(Link)`
     color: white;
 `;
 
+const Btn = styled.button`
+    padding: .5rem 1rem;
+    background-color: green;
+    display: inline-block;
+    margin: 0 .5rem 1rem .5rem;
+    text-decoration: none;
+    color: white;
+    border: 0;
+`;
+
 const ThemedHeading = styled.h1`
     font-size: 4rem;
     margin-bottom: .5rem;
@@ -45,5 +55,6 @@ export {
     ThemedHeading,
     ThemedH2,
     ThemedParagraph,
-    ThemedInput
+    ThemedInput, 
+    Btn
 }

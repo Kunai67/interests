@@ -5,8 +5,10 @@ function SignIn () {
     return (
         <TextCenteredDiv>
             <ThemedH2>Log In</ThemedH2>
-            <ThemedInput placeholder="Username"/>
-            <ThemedInput placeholder="Password" type="password"/>
+            <form>
+                <ThemedInput placeholder="Username"/>
+                <ThemedInput placeholder="Password" type="password"/>
+            </form>
             <BtnLink to="/">Back To Home</BtnLink>
             <BtnLink to="#">Submit</BtnLink>
         </TextCenteredDiv>
