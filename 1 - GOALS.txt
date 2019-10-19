@@ -6,6 +6,20 @@ The goal of this app is to create a simple "social media" application where:
     - The database is MySQL (✔)
     - The users can put interests in their profile and the backend will group them with other users with the same interests
 
+    Main
+    - Get user details from Sign In (✔)
+    - Shows people with same interests
+
+    Main Nav
+    - Logout (✔)
+    - Go To Profile (✔)
+    - Search (Opt)
+
+    Profile
+    - Ability to add interests
+    - Ability to add "bio", profile picture and other details
+    - Ability to connect to FB, Twitter, Google, etc. (Opt)
+
 What I want to learn while doing this:
     - More practice on React (✔)
     - Redux (X) => Not needed anymore as it will only add much more complexity

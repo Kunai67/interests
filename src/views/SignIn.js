@@ -7,21 +7,22 @@ import changeStateOnInput from '../utils/ChangeStateOnInput';
 const url = 'http://localhost/sandbox/js-to-php/signin.php';
 
 function SignIn () {
-    const [signUpObj, changeObj] = useState({});
+    const [signInObj, changeObj] = useState({});
     const [willRedirect, toggleRedirect] = useState(false);
 
     if (willRedirect) {
-        return <Redirect to="/" />
+        sessionStorage.setItem("user", JSON.stringify(signInObj));
+        return <Redirect to="/main"/>
     } else {
         return (
             <TextCenteredDiv>
                 <ThemedH2>Log In</ThemedH2>
                 <form>
-                    <ThemedInput placeholder="Username" name="username" onChange={(e) => changeStateOnInput(e, signUpObj, changeObj)}/>
-                    <ThemedInput placeholder="Password" type="password" name="password" onChange={(e) => changeStateOnInput(e, signUpObj, changeObj)}/>
+                    <ThemedInput placeholder="Username" name="username" onChange={(e) => changeStateOnInput(e, signInObj, changeObj)}/>
+                    <ThemedInput placeholder="Password" type="password" name="password" onChange={(e) => changeStateOnInput(e, signInObj, changeObj)}/>
                 </form>
                 <BtnLink to="/">Back To Home</BtnLink>
-                <Btn onClick={ () => customSubmit(signUpObj, url).then((text) => text ? toggleRedirect(true) : alert("Something went wrong")) }>Submit</Btn>
+                <Btn onClick= { () => customSubmit(signInObj, url).then((text) => text ? toggleRedirect(true) :  alert("Something went wrong")) }>Submit</Btn>
             </TextCenteredDiv>
         );
     }
