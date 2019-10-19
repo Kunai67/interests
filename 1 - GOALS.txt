@@ -17,11 +17,12 @@ The goal of this app is to create a simple "social media" application where:
 
     Profile
     - Ability to add interests
-    - Ability to add "bio", profile picture and other details
+    - Ability to add "bio", profile picture and other details (Opt)
     - Ability to connect to FB, Twitter, Google, etc. (Opt)
 
 What I want to learn while doing this:
     - More practice on React (✔)
+    - Context API
     - Redux (X) => Not needed anymore as it will only add much more complexity
     - CSS-in-JS => Styled-Components (✔)
     - PHP (✔)

@@ -11,7 +11,6 @@ function SignIn () {
     const [willRedirect, toggleRedirect] = useState(false);
 
     if (willRedirect) {
-        sessionStorage.setItem("user", JSON.stringify(signInObj));
         return <Redirect to="/main"/>
     } else {
         return (
@@ -22,7 +21,16 @@ function SignIn () {
                     <ThemedInput placeholder="Password" type="password" name="password" onChange={(e) => changeStateOnInput(e, signInObj, changeObj)}/>
                 </form>
                 <BtnLink to="/">Back To Home</BtnLink>
-                <Btn onClick= { () => customSubmit(signInObj, url).then((text) => text ? toggleRedirect(true) :  alert("Something went wrong")) }>Submit</Btn>
+                <Btn onClick= { () => customSubmit(signInObj, url).then(
+                    (text) => {
+                        if (text) {
+                            sessionStorage.setItem("uid", text);
+                            toggleRedirect(true);
+                        } else {
+                            alert("Something went wrong");
+                        }
+                    }
+                ) }>Submit</Btn>
             </TextCenteredDiv>
         );
     }

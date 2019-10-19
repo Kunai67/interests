@@ -6,6 +6,7 @@ import changeStateOnInput from '../utils/ChangeStateOnInput';
 
 // TODO: Client-side form validation
 // TODO: Check if record already exist (username and email)
+// TODO: After Registration, redirect to MainPage
 
 const url = 'http://localhost/sandbox/js-to-php/signup.php';
 
