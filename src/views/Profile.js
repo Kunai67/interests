@@ -1,24 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BtnLink } from '../components/Styled-Components';
 import { Redirect } from 'react-router-dom';
+import customSubmit from '../utils/CustomSubmit';
+import changeStateOnInput from '../utils/ChangeStateOnInput';
+import { ThemedInput } from '../components/Styled-Components';
 
-// TODO: Adding Interests
+// TODO: Seeing the current interests
 
 function Profile () {
+    const [interests, changeInterests] = useState({id: sessionStorage.getItem("uid")});
+
     if (sessionStorage.length) {
         return (
             <div>
                 <BtnLink to="/" onClick={ () => sessionStorage.clear() }>Logout</BtnLink>
                 <BtnLink to="/main">Home</BtnLink>
-                <h1>{sessionStorage.getItem("uid")}</h1>
                 <h2>Current Interests</h2>
-                <ul>
-                    <li>Sample</li>
-                </ul>
-                <h2>Connections</h2>
-                <ul>
-                    <li>Sample</li>
-                </ul>
+                <form>
+                    <ThemedInput placeholder="Enter interest" name="interests" onChange={(e) => changeStateOnInput(e, interests, changeInterests)}/>
+                </form>
+                <button onClick={() => console.log(customSubmit(interests, "http://localhost/sandbox/js-to-php/add_interests.php"))}>Submit</button>
             </div>
         )
     } else {
